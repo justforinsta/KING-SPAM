@@ -10,8 +10,8 @@ st.markdown("Enter your **Bot Token**, **Target User IDs**, and choose a mode to
 
 # User Inputs
 bot_token = st.text_input("🤖 Bot Token", type="password")
-api_id = st.text_input("📱 API ID", value="2728292")
-api_hash = "18ab225e7244bfc9a1119e6b2f065a48"  # Fixed API hash
+api_id = st.text_input("📱 API ID", value="21111775")  # 👈 Your API ID is here now
+api_hash = "18ab225e7244bfc9a1119e6b2f065a48"  # Replace if needed with your API hash
 
 target_ids = st.text_area("🎯 Target User IDs", help="Comma-separated Telegram user IDs (e.g. 123456789,987654321)")
 group_id = st.text_input("💬 Group Chat ID (optional)", help="Example: -1001234567890 (leave blank for private chat)")
@@ -84,7 +84,7 @@ if start_bot and bot_token and target_ids:
                 "🔁 *spam* – Sends repeated messages to target(s)\n"
                 "💣 *raid* – Sends abusive lines to target(s)\n"
                 "🎯 *replyraid* – Marks users for reply-based raid (only works in groups)\n"
-                "📸 *photospam* – Not supported in this app version\n\n"
+                "📸 *photospam* – Not supported in this Streamlit version\n\n"
                 "⚠️ Users must have started the bot or be in the same group."
             )
             await event.reply(help_text)
@@ -94,4 +94,4 @@ if start_bot and bot_token and target_ids:
     # Launch the async bot
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
-    loop.run_until_complete(main()) 
+    loop.run_until_complete(main())
